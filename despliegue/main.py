@@ -17,17 +17,16 @@ with open("lr_model.pkl", "rb") as f:
 
 
 @app.get("/", response_class=JSONResponse)
-def get_funct(
-    vendor_id: int,
-    pickup_datetime: str,
-    passenger_count: int,
-    pickup_longitude: float,
-    pickup_latitude: float,
-    dropoff_longitude: float,
-    dropoff_latitude: float,
-    pickup_borough: str,
-    dropoff_borough: str,
-):
+def get_funct(vendor_id: int,
+              pickup_datetime: str,
+              passenger_count: int,
+              pickup_longitude: float,
+              pickup_latitude: float,
+              dropoff_longitude: float,
+              dropoff_latitude: float,
+              pickup_borough: str,
+              dropoff_borough: str,
+              ):
     """Serves predictions given query parameters specifying the taxi trip's
     features from a single example.
 
